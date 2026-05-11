@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Figtree';
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf')format('truetype');
+}
+:root{
+    --yellow:hsl(47, 88%, 63%);
+    --white:hsl(0, 0%, 100%);
+    --gray:hsl(0, 0%, 42%);
+    --black:hsl(0, 0%, 7%);
+}
+html {
+  font-size: 62.5%;
+}
+body{
+    font-family: 'Figtree',sans-serif;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2.3rem;
+}
+.blog-card{
+    max-width: 34rem;
+    width: 100%;
+    background-color: var(--white);
+    border: 0.1rem solid var(--black);
+    padding: 2.2rem;
+    border-radius: 2rem;
+    box-shadow: 0.8rem 0.8rem 0 var(--black);
+}
+.blog-image{
+    margin-bottom: 1rem;
+}
+.blog-image img{
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+}
+.ctg-tg{
+    display: inline-block;
+    background-color: var(--yellow);
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5em 0.9em;
+    margin: 1rem 0;
+}
+.publish-date{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+.card-header{
+    margin: 1rem 0;
+}
+.card-header a{
+    text-decoration: none;
+    color: var(--black);
+    cursor: pointer;
+    font-weight: 800;
+    transition: color 0.2s ease-in-out;
+}
+.card-header a:hover{
+    color: var(--yellow);
+}
+.card-description{
+    color: var(--gray);
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin: 1rem 0;
+}
+.author{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+.author img{
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+}
+.author .author-name{
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+
+@media (min-width: 60rem) {
+    .blog-card {
+        max-width: 38.4rem; 
+        padding: 2.4rem;
+    }
+    .card-header a {
+        font-size: 2.4rem; 
+    }
+    .card-description {
+        font-size: 1.6rem; 
+        line-height: 1.5;
+    }
+    .publish-date{
+        font-size: 1.6rem;
+    }
+    .ctg-tg {
+        font-size: 1.4rem;
+    }
+}
